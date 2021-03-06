@@ -1,0 +1,86 @@
+<form [formGroup]="ajoutinf" #ajc="ngForm">
+
+    <div class="p-fluid p-formgrid p-grid">
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Canals</label>
+        <br>
+        <input formControlName="canals" placeholder="Canals..." type="text" class="form-control">
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="bday">NœudAmont</label>
+        <br>
+        <input class="form-control" type="text" formControlName="nœudamont" class="form-control">
+
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="bday">NœudAval</label>
+        <br>
+        <input class="form-control" type="text" formControlName="nœudaval" class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">DebitUnitaire</label>
+        <br>
+        <input formControlName="debitunitaire" placeholder="DebitUnitaire..." type="number" pInputText class="form-control">
+      </div>
+
+
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Surface</label>
+        <br>
+        <input formControlName="surface" placeholder="Surface..." type="number" pInputText class="form-control">
+      </div>
+
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">LargeurDeCanal</label>
+        <br>
+        <input formControlName="largeurdecanal" placeholder="LargeurDeCanal..." type="number" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">CoefManning</label>
+        <br>
+        <input formControlName="coefmanning" placeholder="CoefManning..." type="number" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Pente</label>
+        <br>
+        <input formControlName="pente" placeholder="Pente..." type="number" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Talus</label>
+        <br>
+        <input formControlName="talus" placeholder="Talus..." type="number" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Y0</label>
+        <br>
+        <input formControlName="y0" placeholder="Y0..." type="number" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Revanche</label>
+        <br>
+        <input formControlName="revanche" placeholder="Revanche..." type="number" pInputText class="form-control">
+
+      </div>
+
+     
+    </div>
+    <button class="btn btn-danger" (click)="add(ajc.value)"  color="warn">Valider</button>
+
+
+  </form>
+  

@@ -1,0 +1,182 @@
+<!--<div class="card">
+    <h3>Demander Un Congé</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        
+        <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12 p-md-6">
+                <label for="firstname6">nomComplet</label>
+                <br>
+                <input id="firstname6" placeholder="nomComplet..." type="text" pInputText> 
+            </div>
+            
+              <div>
+                <label for="bday">Date Debut</label>
+                <br>
+                <input type="date" data-date="" data-date-format="yyyy-MM-dd" value="2020-08-09"  >
+    
+              </div>
+
+              <div>
+                <label for="bday">Date Fin</label>
+                <br>
+                <input type="date" data-date="" data-date-format="yyyy-MM-dd" value="2020-08-09"  >
+    
+              </div>
+             
+              <div class="p-field p-col-12 p-md-6">
+                <label for="firstname6">au titre de *</label>
+                <br>
+                <input id="firstname6"  placeholder="raison..." type="text" pInputText> 
+            </div>
+    
+    
+              
+                <div class="p-field p-col-12 p-md-6">
+                    <label for="firstname6">Adresse durant la congé</label>
+                    <br>
+                    <input id="firstname6"  placeholder="Adresse..." type="text" pInputText> 
+                </div>
+                  <div class="p-field p-col-12 p-md-6">
+                      <label for="firstname6">tel durant le congé</label>
+                      <br>
+                      <input id="firstname6" placeholder="tel..." type="text" pInputText> 
+                  </div>
+    
+                  
+
+                  <div class="p-field p-col-12 p-md-6">
+                    <label for="firstname6">interimaire</label>
+                    <br>
+                    <input id="firstname6" placeholder="interimaire..." type="text" pInputText> 
+
+                </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for="firstname6">Validateur</label>
+                        <br>
+                        <input id="firstname6" placeholder="Validateur..." type="text" pInputText> 
+    
+                    </div>
+
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for="firstname6">info</label>
+                        <br>
+                        <input id="firstname6" placeholder="info..." type="text" pInputText> 
+    
+                    </div>
+
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for="firstname6">etat</label>
+                        <br>
+                        <input id="firstname6" placeholder="etat..." type="text" pInputText> 
+    
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                      
+                        <br>
+                       
+                    </div>
+                    </div>
+                    <button pButton type="button" label="Valider" class="btn btn-secondary"></button>        
+
+                  </form>
+                  <div [hidden]="!submitted">
+                    <h4>You submitted successfully!</h4>
+                    // <button class="btn btn-success" (click)="newEmployee()">Add</button> 
+                  </div>
+                </div>-->
+                <div >
+  <!--<div [hidden]="submitted" style="width: 400px;">-->
+  <form [formGroup]="ajoutinf" #ajc="ngForm">
+
+    <div class="p-fluid p-formgrid p-grid">
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">nomComplet</label>
+        <br>
+        <input formControlName="nomComplet" placeholder="nomComplet..." type="text" class="form-control">
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="bday">date Debut</label>
+        <br>
+        <input class="form-control" type="date" formControlName="dateDebut" class="form-control">
+
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="bday">date fin</label>
+        <br>
+        <input class="form-control" type="date" formControlName="dateFin" class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">Nombre de Jour</label>
+        <br>
+        <input formControlName="nbrJour" placeholder="nbrJour..." type="number" pInputText class="form-control">
+      </div>
+
+
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">raison</label>
+        <br>
+        <input formControlName="raison" placeholder="raison..." type="text" pInputText class="form-control">
+      </div>
+
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">adresse</label>
+        <br>
+        <input formControlName="adresse" placeholder="adresse..." type="text" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">telephone</label>
+        <br>
+        <input formControlName="telephone" placeholder="telephone..." type="text" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">interimaire</label>
+        <br>
+        <input formControlName="interimaire" placeholder="interimaire..." type="text" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">validateur</label>
+        <br>
+        <input formControlName="validateur" placeholder="validateur..." type="text" pInputText class="form-control">
+
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">info</label>
+        <br>
+        <input formControlName="info" placeholder="info..." type="text" pInputText class="form-control">
+
+      </div>
+
+     
+    </div>
+
+    <button class="btn btn-danger" (click)="add(ajc.value)"  color="warn">Valider</button>
+
+  </form>
+  <!--<div [hidden]="!submitted">
+                  <h4>You submitted successfully!</h4>
+                  <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+                
+                
+                 
+                
+    
+    
+    
+    
+    
+     

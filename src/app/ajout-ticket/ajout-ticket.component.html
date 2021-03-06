@@ -1,0 +1,59 @@
+<div>
+  
+  <!--<div [hidden]="submitted" style="width: 400px;">-->
+  <form [formGroup]="ajoutinf" #ajc="ngForm">
+
+    <div class="p-fluid p-formgrid p-grid">
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">support</label>
+        <br>
+        <input formControlName="support" placeholder="supoort..." type="text" pInputText class="form-control">
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">equipe</label>
+        <br>
+        <input formControlName="equipe" placeholder="equipe..." type="text" pInputText class="form-control">
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">description</label>
+        <br>
+        <input formControlName="description" placeholder="description..." type="text" pInputText class="form-control">
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">priorite</label>
+        <br>
+        <input formControlName="priorite" placeholder="priorite..." type="text" pInputText class="form-control">
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">dateCreation</label>
+        <br>
+        <input formControlName="dateCreation" placeholder="dateCreation..." type="date" pInputText class="form-control">
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">informer</label>
+        <br>
+        <input formControlName="informer" placeholder="informer..." type="text" pInputText class="form-control">
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="firstname6">pieceJointe</label>
+        <br>
+        <input #Inputf type="file" accept="files/*" formControlName="file" (change)="onFileChange($event)" label="pieceJointe" chooseLabel="pieceJointe" style="display:none;">
+      </div>
+
+    </div>
+    <button pButton pRipple type="button" label="Importer File" (click)="Inputf.click()" class="p-button-raised p-button-danger"></button>
+
+    <button class="btn btn-danger" (click)="add(ajc.value)"  color="warn">Valider</button>
+
+  </form>
+  <!--<div [hidden]="!submitted">
+                  <h4>You submitted successfully!</h4>
+                  <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
